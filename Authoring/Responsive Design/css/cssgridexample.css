@@ -1,0 +1,132 @@
+body {
+    background-color: lightgreen;
+    margin: 40px;
+}
+.box {
+    background-color: #ddd; /* Greyish */
+    color: #fff; /* White */
+}
+header.box, footer.box {
+    background-color: #999;
+}
+article.box {
+    background-color: yellow;
+    color: black;
+}
+aside.box {
+    background-color: red;
+}
+section.box {
+    background-color: blue;
+}
+nav.box {
+    background-color: purple;
+    color: white;
+}
+main {
+    background-color: #000;
+    color: #444;
+}
+article.one {
+    grid-area: sidebarone;
+}
+article.two {
+    grid-area: sidebartwo;
+}
+aside {
+    grid-area: advert;
+}
+section {
+    grid-area: details;
+}
+header {
+    grid-area: header;
+}
+footer {
+    grid-area: footer;
+}
+nav {
+    grid-area: navigation;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+        "header"
+        "navigation"
+        "sidebarone"
+        "sidebartwo"
+        "details"
+        "advert"
+        "footer"
+    ;
+}
+
+@media screen and (min-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "header"
+            "sidebarone"
+            "sidebartwo"
+            "details"
+            "advert"
+            "navigation"
+            "footer"
+        ;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        color: cyan;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-areas: 
+            "header header"
+            "navigation navigation"
+            "sidebarone sidebartwo"
+            "details details"
+            "advert advert"
+            "footer footer"
+        ;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    body {
+        background-color: orange;
+    }
+    main {
+        display: grid;
+        grid-template-columns: 120px auto 100px;
+        grid-template-areas: 
+            "header header header"
+            "navigation navigation navigation"
+            "details details details"
+            "sidebarone sidebartwo advert"
+            "footer footer footer"
+        ;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    body {
+        background-color: orange;
+    }
+    main {
+        display: grid;
+        grid-template-columns: auto 120px 100px;
+        grid-template-areas: 
+            "header header header"
+            "navigation navigation navigation"
+            "sidebarone sidebartwo advert"
+            "details details details"
+            "footer footer footer"
+        ;
+    }
+}

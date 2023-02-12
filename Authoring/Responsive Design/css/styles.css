@@ -1,0 +1,22 @@
+header {
+    background-color: red;
+    color: white;
+}
+nav {
+    background-color: blue;
+    color: white;
+}
+section.primary {
+    background-color: green;
+    color: white;
+}
+section.secondary {
+    background-color: purple;
+    color: white;
+}
+section.tertiary {
+    background-color: orange;
+}
+footer {
+    background-color: aquamarine;
+}

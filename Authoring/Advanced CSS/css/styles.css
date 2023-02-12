@@ -1,0 +1,164 @@
+body {
+    background-color: lightblue;
+}
+nav {
+    background-color: lightgreen;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li::after {
+    content: " | ";
+}
+footer {
+    background-color: lightcoral;
+}
+
+/* Rotate transformations */
+main p.rotate-negative {
+    background-color: blueviolet;
+    color: white;
+    transform: rotate(-30deg);
+}
+.rotateheading {
+    transform: rotate(5deg);
+}
+
+/* Translate transformations */
+.translate {
+    background-color: blueviolet;
+    color: white;
+    width: 50%;
+}
+.translate-x {
+    transform: translateX(150px);
+}
+.translate-y {
+    transform: translateY(200px);
+}
+.translate-both {
+    transform: translate(100px,-80px);
+}
+
+/* Skew transformations */
+.skew {
+    background-color: blueviolet;
+    color: white;
+    width: 50%;
+}
+.skew-x {
+    transform: skewX(45deg);
+}
+.skew-y {
+    transform: skewY(65deg);
+}
+.skew-both {
+    transform: skew(10deg,15deg);
+}
+article img {
+    height: 25%;
+    width: 25%;
+}
+
+/* CSS Transitions */
+div {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    transition: background-color ease-out 60ms;
+}
+div:hover {
+    background-color: blue;
+}
+.yes {
+    transition-duration: 3s;
+}
+.image-small {
+    height: 25%;
+    width: 25%;
+}
+#rotate-header {
+    animation: rotating-element 2000ms, fade-in 15s;
+}
+#fade-in-image {
+    animation: fade-in 4s;
+}
+#fade-in-image-twice {
+    animation: fade-in 4s;
+    animation-iteration-count: infinite;
+}
+#image-map-rotate {
+    animation-name: rotating-element;
+    animation-duration: 3000ms;
+    animation-delay: 2s;
+}
+#image-map-rotate {
+    animation-name: move-image-around 5s;
+    animation-delay: 10s;
+}
+footer {
+    /* animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation-name: ;
+    animation-duration: ;
+    animation-timing-function: ;
+    animation-delay: ;
+    animation-iteration-count: ;
+    animation-direction: ;
+    animation-fill-mode: ; */
+    animation: rotate-circle-full 5s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes rotating-element {
+    33% {
+        transform: rotate(45deg);
+    }
+    66% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+@keyframes fade-in {
+    from {
+        opacity: .25;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes rotate-circle {
+    20% {
+        transform: rotate(72deg);
+    }
+    40% {
+        transform: rotate(144deg);
+    }
+    60% {
+        transform: rotate(216deg);
+    }
+    80% {
+        transform: rotate(288deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-circle-full {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes move-image-around {
+    25% {
+        transform: translate(100px,100px);
+    }
+    50% {
+        transform: translate(-100px,50px);
+    }
+    75% {
+        transform: translate(200px,-100px);
+    }
+}

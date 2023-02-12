@@ -1,0 +1,8 @@
+nav li {
+    background-color: silver;
+    display: inline-block;
+    width: 100px;
+}
+nav li:hover {
+    background-color: gray;
+}

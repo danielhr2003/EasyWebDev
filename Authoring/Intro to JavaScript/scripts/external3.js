@@ -1,0 +1,1 @@
+document.write('<ul><li>Apple</li><li>Banana</li></ul>');

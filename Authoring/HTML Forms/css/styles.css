@@ -1,0 +1,22 @@
+body {
+    background-color: gold;
+}
+fieldset {
+    background-color: lightblue;
+    margin: 5px;
+    padding: 15px;
+}
+legend {
+    background-color: red;
+    color: yellow;
+    font-size: larger;
+}
+label {
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+    width: 160px;
+}
+#age {
+    width: 50px;
+}

@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(245, 198, 145);
+}
+canvas {
+    border: thin black solid;
+}
+.smiley {
+    background-color: green;
+    display: flex;
+    justify-content: center;
+}
+#div1 {
+    border: 1px solid black;
+    height: 215px;
+    padding: 10px;
+    width: 350px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Drag and Drop API</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script>
+            function allowDrop(allowDropEvent) {
+                allowDropEvent.preventDefault();
+            }
+            function drag(dragEvent) {
+                dragEvent.dataTransfer.setData('text',dragEvent.target.id);
+            }
+            function drop(dropEvent) {
+                var data = dropEvent.dataTransfer.getData('text');
+                dropEvent.target.appendChild(document.getElementById(data));
+                dropEvent.preventDefault();
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Drag and Drop API</h1>
+            <hr>
+        </header>
+        <main>
+            <p>Drag the image into the rectangle:</p>
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <image id="drag1" src="images/smiley.png" alt="Smiley" draggable="true" ondragstart="drag(event)"></image>
+        </main>
+        <footer>
+            <hr>
+            &copy; 2022 George Cooke
+        </footer>
+    </body>
+</html>

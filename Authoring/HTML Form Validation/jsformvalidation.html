@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Form Validation - JavaScript</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="scripts/formvalidation.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Form Validation - JavaScript</h1>
+            <hr>
+        </header>
+        <main>
+            <form name="clientinfo" method="post" action="http://ss1.ciwcertified.com/cgi-bin/process.pl" autocomplete="on" novalidate>
+                <fieldset>
+                    <legend>Client Data</legend>
+                    <label for="clientname">*Name:</label>
+                    <input name="clientname" id="clientname" type="text" autofocus required><br>
+                    <label for="email">*Email:</label>
+                    <input name="email" id="email" type="email" autocomplete="on" required><br>
+                    <label for="county">*County</label>
+                    <input name="county" id="county" type="text"><br>
+                </fieldset>
+                <input type="submit" value="Send" onclick="return validateForm(document.clientinfo);">
+            </form>
+        </main>
+        <footer>
+            <hr>
+            &copy; 2022 George Cooke
+        </footer>
+    </body>
+</html>

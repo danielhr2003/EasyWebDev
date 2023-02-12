@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Form Validation - HTML</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Form Validation - HTML</h1>
+            <hr>
+        </header>
+        <main>
+            <form name="clientinfo" method="post" action="http://ss1.ciwcertified.com/cgi-bin/process.pl" autocomplete="on">
+                <fieldset>
+                    <legend>Client Data</legend>
+                    <label for="clientname">*Name:</label>
+                    <input name="clientname" id="clientname" type="text" autocomplete="on" required placeholder="Enter your full name" autofocus tabindex="4"><br>
+                    <label for="email">*Email:</label>
+                    <input name="email" id="email" type="email" autocomplete="on" required placeholder="Enter your personal email account" tabindex="3"><br>
+                    <label for="county">County:</label>
+                    <input name="county" id="county" type="text" placeholder="Enter the county your were born in" tabindex="2"><br>
+                    <label for="satisfaction">Satisfation Level:</label>
+                    <input name="satisfaction" id="satisfaction" type="number" placeholder="Enter a number 1 thru 10" min="1" max="10" value="10" tabindex="1"><br>
+                    <label for="phone">*Phone:</label>
+                    <input name="phone" id="phone" type="tel" pattern="^[2-9]\d{2}-\d{3}-\d{4}$" placeholder="999-999-9999" required><br>
+                    <label for="countrycode">Country Code:</label>
+                    <input name="countrycode" id="countrycode" type="text" minlength="2" maxlength="3" pattern="[A-Za-z]{2-3}"><br>
+                </fieldset>
+                <input type="submit">
+            </form>
+        </main>
+        <footer>
+            <hr>
+            &copy; 2022 George Cooke
+        </footer>
+    </body>
+</html>

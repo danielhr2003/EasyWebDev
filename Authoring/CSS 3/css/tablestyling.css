@@ -1,0 +1,28 @@
+header {
+    border: 2px solid maroon;
+    border-radius: 20px 50px;
+}
+caption {
+    caption-side: bottom;
+    text-align: right;
+    border-right: 4px solid orange;
+}
+table {
+    border-collapse: collapse;
+    border-color: red;
+    border-spacing: 15px;
+    border-style: double;
+    border-width: 10px;
+}
+th {
+    border: 1px solid green;
+}
+td {
+    border: 2px dotted blue;
+}
+p {
+    background-color: lightgreen;
+    border: red 1px solid;
+    margin: 20px;
+    padding: 10px 40px 60px 80px;
+}

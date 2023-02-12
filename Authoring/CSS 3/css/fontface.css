@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Redressed;
+    src: url(../fonts/Redressed-Regular.ttf);
+}
+main {
+    font-family: Redressed;
+}
+@font-face {
+    font-family: 'George Font';
+    src: url(../fonts/Shizuru-Regular.ttf);
+}
+footer {
+    font-family: 'George Font';
+}

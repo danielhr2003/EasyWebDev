@@ -1,0 +1,9 @@
+main div p em {
+    color: red;
+}
+div.help em {
+    color: green;
+}
+#content em {
+    color: blue;
+}

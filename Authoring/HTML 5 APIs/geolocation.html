@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Geolocation API</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Geolocation API</h1>
+            <hr>
+        </header>
+        <main>
+            <p id="MyLocation">Click the button to get your position</p>
+            <button onclick="getLocation()">My Location</button>
+            <div id="locationdiv"></div>
+            <script>
+                var myLocationDiv = document.getElementById('locationdiv');
+
+                function getLocation() {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(showPosition,showError);
+                    } else {
+                        myLocationDiv.innerHTML = 'Geolocation is not supported by this browser.';
+                    }
+
+                    function showPosition(position) {
+                        var positionMessage = 'Latitude: ' + position.coords.latitude + '<br>Longitude: ' + position.coords.longitude;
+                        myLocationDiv.innerHTML = positionMessage;
+                    }
+
+                    function showError(error) {
+                        switch (error.code) {
+                            case error.PERMISSION_DENIED:
+                                myLocationDiv.innerHTML = 'User denied request to obtain current location';
+                                break
+                            case error.POSITION_UNAVAILABLE:
+                                myLocationDiv.innerHTML = 'Location information is unavailable';
+                                break
+                            case error.TIMEOUT:
+                                myLocationDiv.innerHTML = 'The request to get current location timed out';
+                                break
+                            case error.UNKNOWN_ERROR:
+                                myLocationDiv.innerHTML = 'An unknown error occurred';
+                                break
+                        }
+                    }
+                }
+            </script>
+        </main>
+        <footer>
+            <hr>
+            &copy; 2022 George Cooke
+        </footer>
+    </body>
+</html>

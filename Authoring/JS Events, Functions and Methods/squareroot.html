@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Square Root</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="scripts/squareroot.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Square Root</h1>
+            <hr>
+        </header>
+        <main>
+            <script>
+                var userNumber = prompt('Enter a number to calculate the square root of');
+                var result = squareRoot(userNumber);
+                if (isNaN(result)) {
+                    document.write('Invalid number entered. Must be positive!!!');
+                } else {
+                    document.write('Square root of ' + userNumber + ' is ' + result);
+                }
+            </script>
+        </main>
+        <footer>
+            <hr>
+            &copy; 2022 George Cooke
+        </footer>
+    </body>
+</html>

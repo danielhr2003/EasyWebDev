@@ -1,0 +1,1 @@
+document.write('This is the second external JavaScript file!!!')
