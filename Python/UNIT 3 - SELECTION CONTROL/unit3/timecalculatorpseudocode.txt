@@ -1,0 +1,31 @@
+// Time calculator pseudocode
+
+Input numberOfSeconds
+if numberOfSeconds >= 86400
+	// Convert to days, hours, minutes, and seconds
+	days = numberOfSecond integer divide by 86400
+	remainder = numberOfSeconds modulus 86400
+	hours = remainder integer divide by 3600
+	remainder = remainder modulus 3600
+	minutes = remainder integer divide by 60
+	seconds = remainder modulus 60
+	Display days, hours, minutes and seconds	
+else
+	if numberOfSeconds >= 3600
+		// Convert to hours, minutes and seconds
+		hours = numberOfSeconds integer divide by 3600
+		remainder = numberOfSeconds modulus 3600
+		minutes = remainder integer divide by 60
+		seconds remainder modulus 60
+		Display hours, minutes and seconds
+	else
+		if numberOfSeconds >= 60
+			// Convert to minutes and seconds
+			minutes = numberOfSeconds integer divide by 60
+			seconds = numberOfSecond modulus 60
+			Display minutes and seconds
+		else
+			Display numberOfSeconds
+		end-if
+	end-if
+end-if
