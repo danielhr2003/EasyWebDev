@@ -1,8 +1,6 @@
 // Selection control
 
 
-// Conditional 
-
 function conditional() {
     var name = "Juan";
     if (name == "Daniel") {
@@ -15,5 +13,7 @@ function conditional() {
         console.log("You're not Daniel")
     }
  }
- 
- conditional();
+
+ // Repetition control
+
+
